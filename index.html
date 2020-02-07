@@ -1,0 +1,23 @@
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+	<script src="https://unpkg.com/leaflet@1.3.0/dist/leaflet.js"></script>
+	<script src="leaflet_util.js"></script>
+</head>
+
+<div>
+	<input class="input" id="datepick" type="text">
+	<script>
+		document.getElementById("datepick").flatpickr({mode: "range"});
+	</script>
+</div>
+
+<div id="mapcontainer" style="width:600px;height:600px"></div>
+<script>
+	leaflet_init("https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png", 135, 36, 5);
+	leaflet_mark(135, 34, "test", "<a>test pop</a>");
+</script>
+
